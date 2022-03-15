@@ -98,13 +98,13 @@ PVector[] lightPos = {
   new PVector(lx - 200, ly, lz - 700)};
 
 PVector[] lightColor = {
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255), 
-  new PVector(255, 255, 255)};
+  new PVector(100, 100, 100), 
+  new PVector(100, 100, 100),
+  new PVector(100, 100, 100),
+  new PVector(100, 100, 100), 
+  new PVector(100, 100, 100),
+  new PVector(100, 100, 100), 
+  new PVector(100, 100, 100)};
 
 /* Load textures and objects */
 void setup() {
@@ -120,16 +120,16 @@ void setup() {
 /* Construct objects and set camera and lights */
 void draw() {
   background(0);
-  shader(shader);
-  shape(setter.getGlobal());
-  resetShader();
-
-  lights();
   
   pov.keyHold();
   pov.moveCamera();
   pov.refresh();
   hb.polygonCollision(pov);
+  
+  shader(shader);
+  shape(setter.getGlobal());
+  resetShader();
+  lights();
 }
 
 /* Load all textures from textures directory */
